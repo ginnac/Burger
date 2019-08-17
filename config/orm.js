@@ -111,5 +111,5 @@ function printQuestionMarks(number) {
     //....................................
   };
   
-  // Export the orm object for the model (cat.js).
+  // Export the orm object for the model file
   module.exports = orm;
