@@ -3,7 +3,7 @@ var orm = require("../config/orm.js");
 
 //create code that will call the ORM fucntions using specific input for the ORM
 
-var Burger = {
+var burger = {
     all: function(callback) {
       orm.all("burgers", function(res) {
         callback(res);
@@ -29,5 +29,5 @@ var Burger = {
   
  
 //export at the end
-  module.exports = cat;
+  module.exports = burger;
 
