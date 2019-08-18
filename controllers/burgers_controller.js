@@ -21,7 +21,7 @@ console.log(tableObject);
 //post new rows in our burger data
 router.post("/api/burgers", function(req, res) {
     burger.create(["burger_name", "devoured"], 
-    [req.body.burger_name, req.body.devoured],
+    [req.body.burger_name, false],
     function(result) {
         // Send back the ID of the new row
         res.json({ id: result.insertId });
@@ -35,8 +35,7 @@ router.post("/api/burgers", function(req, res) {
     console.log("condition", condition);
   
     burger.update({
-      burger_name: req.body.burger_name,  
-      devoured: req.body.devoured
+      devoured: true
     }, condition, function(result) {
         // If no rows were changed, 
         //then the ID must not exist, so 404 status 
