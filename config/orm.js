@@ -104,11 +104,29 @@ function printQuestionMarks(number) {
   
         callback(result);
       });
-    }
+    },
 
 
 
     //....................................
+
+    //delete function:
+
+    delete: function(tableName, condition, callback) {
+        var queryString = "DELETE FROM " + tableName;
+        queryString += " WHERE ";
+        queryString += condition;
+    
+        connection.query(queryString, function(err, result) {
+          if (err) {
+            throw err;
+          }
+    
+          callback(result);
+        });
+      }
+
+
   };
   
   // Export the orm object for the model file

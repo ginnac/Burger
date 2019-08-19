@@ -20,11 +20,11 @@ var burger = {
         callback(res);
       });
     },
-    // delete: function(condition, callback) {
-    //   orm.delete("burgers", condition, function(res) {
-    //     callback(res);
-    //   });
-    // }
+    delete: function(condition, callback) {
+      orm.delete("burgers", condition, function(res) {
+        callback(res);
+      });
+    }
   };
   
  
